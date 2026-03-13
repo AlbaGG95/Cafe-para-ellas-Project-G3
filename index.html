@@ -1,22 +1,88 @@
 <!DOCTYPE html>
+<!-- Alba (13/03/2026) Home inicial del proyecto Café para ellas -->
 <html lang="es">
 <head>
+    <!-- Metadatos básicos para responsive y SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café para ellas</title>
+    <meta name="description" content="Café para ellas: cafetería acogedora creada para mujeres.">
+    <title>Café para ellas | Home</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- Cabecera principal: nombre del proyecto + menú de navegación -->
     <header>
         <h1>Café para ellas</h1>
-        <nav>
+        <!-- Navbar común para enlazar todas las páginas del proyecto -->
+        <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios y productos</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="sobre.html">Sobre nosotras</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Contenido principal del Home -->
     <main>
+        <!-- Sección de bienvenida y propuesta de valor -->
+        <section aria-labelledby="bienvenida">
+            <h2 id="bienvenida">Bienvenida a Café para ellas</h2>
+            <p>
+                Un espacio creado para mujeres que quieren disfrutar de buen café,
+                conversar con calma y sentirse en casa.
+            </p>
+            <p>
+                En Café para ellas celebramos el apoyo entre mujeres en un ambiente
+                cercano, seguro e inspirador.
+            </p>
+            <p>
+                <a href="servicios.html">Ver servicios y productos</a>
+            </p>
+        </section>
+
+        <!-- Sección de destacados con artículos independientes -->
+        <section aria-labelledby="destacados">
+            <h2 id="destacados">Lo más destacado</h2>
+
+            <article>
+                <h3>Café de especialidad</h3>
+                <p>Sabores de temporada pensados para disfrutar cada pausa contigo.</p>
+            </article>
+
+            <article>
+                <h3>Encuentros con propósito</h3>
+                <p>Charlas, actividades y encuentros para compartir ideas entre mujeres.</p>
+            </article>
+
+            <article>
+                <h3>Ambiente cuidado</h3>
+                <p>Un lugar acogedor para hablar, trabajar o desconectar a tu ritmo.</p>
+            </article>
+        </section>
+
+        <!-- Sección de experiencia con lista de beneficios -->
+        <section aria-labelledby="experiencia">
+            <h2 id="experiencia">Nuestra experiencia</h2>
+            <p>
+                Cada visita está pensada para que te sientas cómoda, escuchada y bienvenida:
+            </p>
+            <ul>
+                <li>Atención cercana y respetuosa en todo momento.</li>
+                <li>Menú variado con opciones para distintos gustos y necesidades.</li>
+                <li>Espacio para conectar, inspirarte y crear red con otras mujeres.</li>
+            </ul>
+            <p>
+                <a href="contacto.html">Reserva o escríbenos</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Pie de página simple -->
+    <footer>
+        <p>&copy; 2026 Café para ellas. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

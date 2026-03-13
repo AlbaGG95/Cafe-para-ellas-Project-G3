@@ -1,7 +1,161 @@
-/* Tipografía y fondo */
+/* Alba (13/03/2026) Estilos básicos para Home */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito+Sans:wght@400;500;700&display=swap");
+
+/* Reset básico para evitar estilos por defecto distintos entre navegadores */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general del sitio */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4efe9;
-    color: #3b2a23;
-    line-height: 1.6;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    line-height: 1.5;
+    color: #2f1e17;
+    background-color: #f3e7d3;
+}
+
+/* Tipografía principal accesible para títulos */
+h1,
+h2,
+h3 {
+    font-family: "Atkinson Hyperlegible", "Trebuchet MS", Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* Navegación con fuente clara para mejorar legibilidad */
+nav a {
+    font-family: "Atkinson Hyperlegible", "Trebuchet MS", Arial, sans-serif;
+    font-weight: 700;
+}
+
+/* Cabecera con paleta café inspirada en la maqueta */
+header {
+    background: linear-gradient(180deg, #5c3828 0%, #3f251a 100%);
+    color: #f7efe4;
+    border-bottom: 4px solid #c89a63;
+    padding: 1.25rem 1rem;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.9rem;
+}
+
+/* Menú horizontal adaptable (salta de línea en pantallas pequeñas) */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+/* Enlaces del menú con estilo de botón redondeado */
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #f7efe4;
+    background-color: #7a4a33;
+    border: 1px solid #c89a63;
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.95rem;
+}
+
+/* Estado hover para mejor feedback visual */
+nav a:hover {
+    background-color: #c89a63;
+    color: #2f1e17;
+}
+
+/* Contenedor principal centrado */
+main {
+    width: min(980px, 92%);
+    margin: 1.5rem auto 2rem;
+}
+
+/* Tarjetas base para cada sección del Home */
+section {
+    background-color: #fff8ee;
+    border: 1px solid #d5b895;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    padding: 1.1rem;
+}
+
+/* Encabezados de sección con separador inferior */
+section h2 {
+    color: #4c2d20;
+    margin-bottom: 0.6rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e5cfb2;
+    padding-bottom: 0.3rem;
+}
+
+/* Espaciado de párrafos y enlaces internos */
+section p {
+    margin-bottom: 0.7rem;
+}
+
+section a {
+    color: #6f3e2a;
+    font-weight: 700;
+}
+
+section a:hover {
+    color: #b16746;
+}
+
+/* Grid para la sección de destacados (móvil primero) */
+section[aria-labelledby="destacados"] {
+    display: grid;
+    gap: 0.9rem;
+}
+
+/* Mini tarjetas de cada artículo destacado */
+article {
+    background-color: #f9efe0;
+    border: 1px solid #e1c7a7;
+    border-radius: 8px;
+    padding: 0.9rem;
+}
+
+/* Títulos de artículo */
+article h3 {
+    color: #5f3525;
+    margin-bottom: 0.35rem;
+}
+
+/* Ajustes simples para listas */
+ul {
+    margin: 0.6rem 0 0.7rem 1.2rem;
+}
+
+li {
+    margin-bottom: 0.35rem;
+}
+
+/* Pie de página consistente con la cabecera */
+footer {
+    background-color: #3f251a;
+    color: #f7efe4;
+    text-align: center;
+    padding: 0.95rem 1rem;
+    font-size: 0.92rem;
+}
+
+/* En escritorio, los destacados se muestran en tres columnas */
+@media (min-width: 760px) {
+    section[aria-labelledby="destacados"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    section[aria-labelledby="destacados"] h2 {
+        grid-column: 1 / -1;
+    }
 }
