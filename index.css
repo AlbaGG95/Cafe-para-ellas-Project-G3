@@ -1,0 +1,7 @@
+/* Tipografía y fondo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4efe9;
+    color: #3b2a23;
+    line-height: 1.6;
+}
