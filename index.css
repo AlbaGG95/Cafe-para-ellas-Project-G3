@@ -159,3 +159,71 @@ footer {
         grid-column: 1 / -1;
     }
 }
+
+/* --- ESTILOS EXCLUSIVOS PARA CONTACTO.HTML --- */
+
+/* Contenedor del formulario y espaciado de la pregunta */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+}
+
+/* Estilo para el área de texto (mensaje) */
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #d5b895; /* Color acorde a la paleta de Alba */
+    border-radius: 8px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1rem;
+    background-color: #ffffff;
+    resize: vertical; /* Permite estirar hacia abajo pero no hacia los lados */
+}
+
+/* Efecto de foco para accesibilidad */
+.formulario-contacto textarea:focus {
+    outline: 2px solid #c89a63;
+    border-color: transparent;
+}
+
+/* Contenedor y diseño del botón de enviar */
+.contenedor-boton {
+    margin-top: 1rem;
+}
+
+.formulario-contacto button {
+    background-color: #7a4a33;
+    color: #f7efe4;
+    border: 1px solid #c89a63;
+    border-radius: 999px; /* Botón redondeado como los del menú */
+    padding: 0.6rem 1.5rem;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Feedback visual al pasar el ratón */
+.formulario-contacto button:hover {
+    background-color: #c89a63;
+    color: #2f1e17;
+}
+
+/* Ajustes para la lista de datos (Dirección, Teléfono, Horario) */
+.lista-datos {
+    list-style: none !important;
+    margin: 1rem 0 0 0 !important;
+    padding: 0 !important;
+}
+
+.lista-datos > li {
+    margin-bottom: 0.8rem;
+}
+
+/* Estilo para sub-listas (como las líneas de horario) */
+.lista-datos ul {
+    margin-top: 0.3rem;
+    list-style: disc;
+}
