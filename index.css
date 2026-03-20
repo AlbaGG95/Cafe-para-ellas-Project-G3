@@ -14,6 +14,13 @@ body {
     line-height: 1.5;
     color: #2f1e17;
     background-color: #f3e7d3;
+    background-image:
+        linear-gradient(rgba(243, 231, 211, 0.48), rgba(243, 231, 211, 0.48)),
+        url("img/fondo-web-cafe.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Tipografía principal accesible para títulos */
@@ -75,7 +82,6 @@ h1 {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
 }
 
-/* Menú horizontal adaptable (salta de línea en pantallas pequeñas) */
 /* (Codex 20/03/2026) Navbar compartido con más jerarquía visual y mejor foco */
 nav {
     width: min(1100px, 100%);
@@ -87,6 +93,7 @@ nav {
     box-shadow: 0 14px 28px rgba(18, 8, 3, 0.16);
 }
 
+/* Menú horizontal adaptable para móvil y escritorio */
 nav ul {
     list-style: none;
     display: flex;
@@ -142,7 +149,7 @@ main {
 
 /* Tarjetas base para cada sección del Home */
 section {
-    background-color: #fff8ee;
+    background-color: rgba(255, 248, 238, 0.9);
     border: 1px solid #d5b895;
     border-radius: 10px;
     margin-bottom: 1.2rem;
@@ -172,7 +179,7 @@ section a:hover {
     color: #b16746;
 }
 
-/* Grid para la sección de destacados (móvil primero) */
+/* Grid para la sección de destacados */
 section[aria-labelledby="destacados"] {
     display: grid;
     gap: 0.9rem;
@@ -180,7 +187,7 @@ section[aria-labelledby="destacados"] {
 
 /* Mini tarjetas de cada artículo destacado */
 article {
-    background-color: #f9efe0;
+    background-color: rgba(249, 239, 224, 0.88);
     border: 1px solid #e1c7a7;
     border-radius: 8px;
     padding: 0.9rem;
@@ -201,7 +208,7 @@ li {
     margin-bottom: 0.35rem;
 }
 
-/* Pie de página consistente con la cabecera */
+/* Pie de página compartido con información y enlaces */
 .site-footer {
     background: linear-gradient(180deg, #3f251a 0%, #2a1710 100%);
     color: #f7efe4;
@@ -309,16 +316,16 @@ li {
     margin-top: 1.2rem;
 }
 
-/* Estilo para el área de texto (mensaje) */
+/* Estilo para el área de texto */
 .formulario-contacto textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #d5b895; /* Color acorde a la paleta de Alba */
+    border: 1px solid #d5b895;
     border-radius: 8px;
     font-family: "Nunito Sans", sans-serif;
     font-size: 1rem;
     background-color: #ffffff;
-    resize: vertical; /* Permite estirar hacia abajo pero no hacia los lados */
+    resize: vertical;
 }
 
 /* Efecto de foco para accesibilidad */
@@ -336,7 +343,7 @@ li {
     background-color: #7a4a33;
     color: #f7efe4;
     border: 1px solid #c89a63;
-    border-radius: 999px; /* Botón redondeado como los del menú */
+    border-radius: 999px;
     padding: 0.6rem 1.5rem;
     font-family: "Atkinson Hyperlegible", sans-serif;
     font-weight: 700;
@@ -350,7 +357,7 @@ li {
     color: #2f1e17;
 }
 
-/* Ajustes para la lista de datos (Dirección, Teléfono, Horario) */
+/* Ajustes para la lista de datos */
 .lista-datos {
     list-style: none !important;
     margin: 1rem 0 0 0 !important;
@@ -361,7 +368,7 @@ li {
     margin-bottom: 0.8rem;
 }
 
-/* Estilo para sub-listas (como las líneas de horario) */
+/* Estilo para sublistas del horario */
 .lista-datos ul {
     margin-top: 0.3rem;
     list-style: disc;
