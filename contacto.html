@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café para ellas | Contacto</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        /* Estilo rápido para el mensaje de éxito */
+        #mensaje-exito {
+            display: none;
+            background-color: #e5f4e1;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -29,16 +42,22 @@
                 <strong>hola@cafeparaellas.es</strong>
             </p>
 
-            <form action="#" method="post" class="formulario-contacto">
+            <form id="form-contacto" action="#" method="post" class="formulario-contacto">
                 <p><strong>¿En qué podemos ayudarte?</strong></p>
 
                 <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje..."
                     required></textarea>
 
                 <div class="contenedor-boton">
-                    <button type="submit">Enviar mensaje</button>
+                    <button type="submit" id="btn-enviar">Enviar mensaje</button>
                 </div>
             </form>
+
+            <div id="mensaje-exito">
+                <p><strong>¡Gracias por escribirnos!</strong></p>
+                <p>Hemos recibido tu mensaje correctamente. Te responderemos muy pronto con un café virtual en la mano.
+                </p>
+            </div>
         </section>
 
         <section aria-labelledby="donde-encontrarnos">
@@ -62,6 +81,20 @@
     <footer>
         <p>&copy; 2026 Café para ellas. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Lógica para que el botón "funcione" visualmente
+        const formulario = document.getElementById('form-contacto');
+        const mensajeExito = document.getElementById('mensaje-exito');
+
+        formulario.addEventListener('submit', function (event) {
+            event.preventDefault(); // Evita que la página se refresque
+
+            // Ocultamos el formulario y mostramos el mensaje de éxito
+            formulario.style.display = 'none';
+            mensajeExito.style.display = 'block';
+        });
+    </script>
 </body>
 
 </html>
