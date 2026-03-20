@@ -7,34 +7,39 @@
     <title>Café para ellas | Contacto</title>
     <link rel="stylesheet" href="index.css">
     <style>
-        /* Estilo rápido para el mensaje de éxito */
-        #mensaje-exito {
-            display: none;
-            background-color: #e5f4e1;
-            border: 1px solid #c3e6cb;
-            color: #155724;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            text-align: center;
+        /* Estilo para que la imagen se vea bien */
+        .logo-cafe {
+            display: block;
+            margin: 1.5rem auto;
+            max-width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Café para ellas</h1>
+        <div class="brand">
+            <a class="brand-logo" href="index.html" aria-label="Ir a inicio">
+                <img src="img/cafeParaMujeres.jpg" alt="Logotipo de Café para ellas">
+            </a>
+            <h1>Café para ellas</h1>
+        </div>
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios y productos</a></li>
                 <li><a href="equipo.html">Equipo</a></li>
                 <li><a href="sobre.html">Sobre nosotras</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <img src="img/cafeParaMujeres.jpg" alt="Logotipo Café para ellas" class="logo-cafe">
+
         <section aria-labelledby="contacto-titulo">
             <h2 id="contacto-titulo">Escríbenos</h2>
             <p>
@@ -42,7 +47,7 @@
                 <strong>hola@cafeparaellas.es</strong>
             </p>
 
-            <form id="form-contacto" action="#" method="post" class="formulario-contacto">
+            <form id="form-contacto" action="contacto.html" method="get" class="formulario-contacto">
                 <p><strong>¿En qué podemos ayudarte?</strong></p>
 
                 <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje..."
@@ -52,49 +57,47 @@
                     <button type="submit" id="btn-enviar">Enviar mensaje</button>
                 </div>
             </form>
-
-            <div id="mensaje-exito">
-                <p><strong>¡Gracias por escribirnos!</strong></p>
-                <p>Hemos recibido tu mensaje correctamente. Te responderemos muy pronto con un café virtual en la mano.
-                </p>
-            </div>
         </section>
 
         <section aria-labelledby="donde-encontrarnos">
             <h2 id="donde-encontrarnos">Dónde encontrarnos</h2>
-
             <p><strong>Nuestro equipo:</strong> Alba, Nerea, Liliana y Elisenda.</p>
-
             <ul class="lista-datos">
                 <li><strong>Dirección:</strong> Calle del Espíritu Santo, 15, 28004 Madrid.</li>
                 <li><strong>Teléfono:</strong> +34 910 123 456</li>
-                <li><strong>Horario:</strong>
-                    <ul>
-                        <li>Lunes a Viernes: 08:30 - 20:30</li>
-                        <li>Sábados y Domingos: 09:30 - 15:00</li>
-                    </ul>
-                </li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Café para ellas. Todos los derechos reservados.</p>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <section class="footer-brand" aria-labelledby="footer-marca">
+                <h2 id="footer-marca">Café para ellas</h2>
+                <p>Especialidad, calma y comunidad en un espacio pensado para disfrutar sin prisa.</p>
+            </section>
+
+            <section class="footer-nav" aria-labelledby="footer-enlaces">
+                <h2 id="footer-enlaces">Enlaces</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="sobre.html">Sobre nosotras</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-contact" aria-labelledby="footer-contacto">
+                <h2 id="footer-contacto">Contacto</h2>
+                <ul>
+                    <li><a href="mailto:hola@cafeparaellas.es">hola@cafeparaellas.es</a></li>
+                    <li><a href="tel:+34910123456">+34 910 123 456</a></li>
+                    <li>Madrid · Lunes a domingo</li>
+                </ul>
+            </section>
+        </div>
+
+        <p class="footer-copy">&copy; 2026 Café para ellas. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        // Lógica para que el botón "funcione" visualmente
-        const formulario = document.getElementById('form-contacto');
-        const mensajeExito = document.getElementById('mensaje-exito');
-
-        formulario.addEventListener('submit', function (event) {
-            event.preventDefault(); // Evita que la página se refresque
-
-            // Ocultamos el formulario y mostramos el mensaje de éxito
-            formulario.style.display = 'none';
-            mensajeExito.style.display = 'block';
-        });
-    </script>
 </body>
 
 </html>
