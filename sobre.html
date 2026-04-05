@@ -8,49 +8,51 @@
     <link rel="stylesheet" href="index.css">
 
     <style>
-        .div title {
-            padding: 20px;
-            background-color: rgb(195, 30, 30);
-            width: 500px;
-            height: 100px;
+        .title {
+            position: relative;
+            text-align: center;
+            color:peachpuff;
+            height: 300px;
+            /* Ajustado para que se vea el fondo */
+            overflow: hidden;
             display: flex;
+            align-items: center;
             justify-content: center;
-            flex-direction: row;
-
-
-
         }
 
         .pic {
             width: 100%;
-            height: 10%;
+            height: 100%;
+            object-fit: cover;
             opacity: 70%;
-
+            position: absolute;
+            z-index: -1;
         }
+
+        
 
         .title h1 {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             padding: 100px;
-            font-size: xxx-large;
+            font-size: 3.5rem;   /* Recordar,  otra forma para hacerla mas grande xxx-large esta en html equipo*/
 
         }
 
-        .titleh3 {
+        .titleh3, .titlenc {
             justify-content: center;
+            font-size: 1.5rem;
             margin-left: 5%;
             margin-right: 10%;
 
         }
 
         .Quienes {
-            display: flex;
-            flex-direction: row;
-            overflow: scroll;
-            width: 600px;
-            height: 300px;
+            display: grid;
+            max-width: 1200px;
             justify-content: center;
+            text-size-adjust:auto;
             margin-left: 5%;
             margin-right: 5%;
             background-color: rgba(255, 248, 238, 0.9);
@@ -62,43 +64,31 @@
 
         }
 
-        .titlenc {
-            justify-content: center;
-            margin-left: 5%;
-            margin-right: 10%;
+
+       /* Contenedor principal con GRID para alinear las fotos no olvidar en grid funciona mejor*/
+       .container {
+           max-width: 1200px;
+           padding: 40px 20px;
+           margin: 0 auto;
+           display: grid;
+           /* Crea 2 columnas iguales */
+           grid-template-columns: repeat(2, 1fr); 
+           gap: 20px; /* Espacio entre las fotos */
+           
         }
 
-        .container {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            align-items: center;
-            margin-left: 5%;
-            margin-right: 5%;
-
-        }
-
-        .image1 {
+        .image1,  .image2 {
             width: 600px;
             height: 300px;
-
-
-        }
-
-        .image2 {
-            width: 600px;
-            height: 300px;
-
-
-        }
-
+            object-fit: cover;
+            border-radius: 15px;
+         }
 
         .Nuestro {
-            display: flex;
-            flex-direction: row;
-            width: 600px;
-            height: 300px;
+            display: grid;
+            max-width: 1200px;
             justify-content: center;
+            text-size-adjust:auto;
             margin-left: 5%;
             margin-right: 5%;
             background-color: rgba(255, 248, 238, 0.9);
@@ -107,6 +97,10 @@
             margin-bottom: 1.2rem;
             padding: 1.1rem;
         }
+        .last {
+        font: bold;    
+        }
+
     </style>
 </head>
 
@@ -151,15 +145,11 @@
             Para nosotros, cada grano es un símbolo de empoderamiento y resiliencia. Al elegir nuestro café, no solo
             disfrutas de un perfil de taza excepcional con notas vibrantes y equilibradas; también te haces parte de
             una
-            cadena de valor que honra el trabajo de las mujeres que son el pilar de sus comunidades rurales. Nuestra
-            misión es simple pero profunda: unir la tradición ancestral del campo colombiano con la vanguardia del
-            tostado artesanal, ofreciéndote una herencia de sabor que celebra la fuerza, el cuidado y la excelencia
-            en cada sorbo.</p>
+            cadena de valor que honra el trabajo de las mujeres que son el pilar de sus comunidades.</p>
     </div>
     <br>
 
     <h3 class="titlenc">Nuestro Cafe</h3>
-    <br>
 
     <div class="container">
 
@@ -174,11 +164,9 @@
     </div>
     <br>
     <div class="Nuestro">
-
-        <p>
-            Tu refugio de calma
-            <br>
-            En Cafe para ellas, hemos creado un santuario diseñado para abrazar tus emociones y desconectar
+        <h4 class="last">Tu refugio de calma</h4>
+        <br>
+        <p> En Cafe para ellas, hemos creado un santuario diseñado para abrazar tus emociones y desconectar
             del ruido exterior. Un espacio seguro de luces cálidas y rincones íntimos donde puedes ser tú misma,
             recuperar tu centro y transformar un simple café en un momento de paz absoluto.
 
